@@ -1,67 +1,170 @@
-body {
-    font-family: sans-serif;
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f6f8;
 }
 
+/* ===== Header ===== */
+header {
+    background: linear-gradient(135deg, #2d1b4e 0%, #4a2c7a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px 48px;
+}
+
+.logo {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    color: #FFEB3B;
+}
+
+.tagline {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+/* ===== Main content ===== */
 main {
-    padding: 20px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
 }
 
 section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8ecf0;
 }
 
-#about {
-    text-align: center;
+h2 {
+    font-size: 1.4rem;
+    color: #4a2c7a;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFEB3B;
+    display: inline-block;
 }
 
-#about img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+/* ===== About ===== */
+#about p {
+    font-size: 1.05rem;
+    color: #333;
 }
 
-#services ul {
-    list-style: square;
-    padding: 0;
+/* ===== Services ===== */
+.service-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin-top: 8px;
 }
 
+.service-list li {
+    background: #f8f5fc;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border-left: 4px solid #6B2D9B;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ===== Contact ===== */
 #contact {
     text-align: center;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    margin-top: 20px;
+#contact p {
+    margin-bottom: 12px;
+    color: #444;
 }
 
-/* Style for the bar */
-#service-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #444;
-    color: white;
+.email-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #6B2D9B, #8e44ad);
+    color: #FFEB3B;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 16px 0 12px;
+    box-shadow: 0 6px 18px rgba(107, 45, 155, 0.35);
+    transition: all 0.25s ease;
+}
+
+.email-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(107, 45, 155, 0.45);
+    background: linear-gradient(135deg, #5a2580, #7d3c98);
+}
+
+.email-address {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 8px !important;
+}
+
+.phone {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.phone strong {
+    color: #4a2c7a;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #2d1b4e;
+    color: #ddd;
     text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: -1; /* Ensure it's behind the content */
+    padding: 24px 20px;
+    font-size: 0.95rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    header {
+        padding: 28px 16px 36px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .logo {
+        max-width: 220px;
+    }
+
+    section {
+        padding: 22px 18px;
+    }
+
+    .email-button {
+        padding: 13px 24px;
+        font-size: 1rem;
+    }
 }
