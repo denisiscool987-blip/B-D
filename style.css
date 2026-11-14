@@ -136,6 +136,42 @@ h2 {
     color: #4a2c7a;
 }
 
+/* ===== Business Card Download ===== */
+.card-download {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #e8ecf0;
+}
+
+.card-download p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.download-button {
+    display: inline-block;
+    background: #2d1b4e;
+    color: #FFEB3B;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 11px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid #6B2D9B;
+    transition: all 0.2s ease;
+}
+
+.download-button:hover {
+    background: #4a2c7a;
+    transform: translateY(-2px);
+}
+
+.card-note {
+    font-size: 0.8rem !important;
+    color: #888 !important;
+    margin-top: 8px !important;
+}
+
 /* ===== Footer ===== */
 footer {
     background: #2d1b4e;
